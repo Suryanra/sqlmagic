@@ -11,7 +11,7 @@ const sqlQueries = [
 
   return (
     <div>
-      {sqlQueries.map((query)=>(<div>{query}</div>))}
+      {sqlQueries.map((query,index)=>(<div key={index}>{query}</div>))}
     </div>
   )
 }
