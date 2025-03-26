@@ -1,5 +1,6 @@
 import React from "react";
 
+
 const Terminal = ({ height, setHeight }) => {
   const handleMouseDown = (e) => {
     e.preventDefault();

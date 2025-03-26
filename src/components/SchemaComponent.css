@@ -1,0 +1,68 @@
+/* Schema container */
+.schema-container {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  font-family: "Arial", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 200;
+  display: flex;
+  flex-direction:column ;
+  row-gap: 4px;
+  padding: 5px;
+  box-sizing: border-box;
+
+}
+
+.schema-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: left;
+  left:10px;
+}
+
+.table-box {
+  box-sizing: border-box;
+      width: 100%;
+  border-radius:2px;
+  border:2px solid  #a3a3a3;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+
+.table-header {
+  font-size: 18px;
+  font-weight: bold;
+  padding: 4px;
+  border-radius: 6px;
+  text-align: left;
+}
+
+/* Table */
+.schema-table {
+  width: 95%;
+  margin-top: 4px;
+  border-collapse: collapse;
+}
+
+.schema-table th,
+.schema-table td {
+  padding: 4px;
+  text-align: left;
+  border-bottom: 1px solid #444;
+}
+
+
+
+
+.schema-container {
+  overflow-y: auto;
+  scrollbar-width: none;  
+  -ms-overflow-style: none; 
+}
+
+.schema-container::-webkit-scrollbar {
+  display: none;
+}

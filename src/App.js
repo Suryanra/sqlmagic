@@ -1,8 +1,9 @@
 import React, { useState, lazy, Suspense } from "react";
 import "./App.css";
-import Navbar from "./components/Navbar"; // Import the new Navbar component
+import './components/Terminal.css'
+import Navbar from "./components/Navbar";
+import MainContent from "./components/MainContent";
 
-// Lazy loading components
 const LeftSidebar = lazy(() => import("./components/LeftSidebar"));
 const RightSidebar = lazy(() => import("./components/RightSidebar"));
 const Terminal = lazy(() => import("./components/Terminal"));
@@ -32,24 +33,14 @@ const App = () => {
           {showLeftSidebar && <LeftSidebar />}
         </Suspense>
 
-        <main className="content">Main Content</main>
+        <main className="content"><MainContent/></main>
 
         <Suspense fallback={<div>Loading Right Sidebar...</div>}>
           {showRightSidebar && <RightSidebar />}
         </Suspense>
       </div>
 
-      {showTerminal && (
-        <div
-          className="terminal-container"
-          style={{
-            position: "absolute",
-            bottom: 0,
-            left: 0,
-            width: "100%",
-            zIndex: 1000,
-          }}
-        >
+      {showTerminal && (<div className="terminal-container">
           <Suspense fallback={<div>Loading Terminal...</div>}>
             <Terminal
               height={terminalHeight}

@@ -60,10 +60,8 @@
 /* Sidebar Styling */
 .sidebar {
   width: 250px;
-  padding: 12px;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
   transition: background-color 0.3s, color 0.3s;
   font-weight: bold;
 }
@@ -109,6 +107,7 @@
   resize: vertical;
 }
 
+
 /* Resizer for Terminal */
 .resizer {
   height: 5px;
@@ -130,4 +129,27 @@
 .dark-mode {
   background-color: #121212; /* Better contrast in dark mode */
   color: #ffffff;
+}
+
+
+.terminal-container{
+  position: absolute;
+  bottom: 0;
+  left:0;
+  width:100%;
+  z-index: 1000;
+}
+
+
+
+.layout-controls {
+  position: absolute;
+  background: #333;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top:20px ;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+.layout-controls  button{
+  margin:5px;
 }
