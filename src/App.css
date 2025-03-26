@@ -1,38 +1,133 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  height: 100vh;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Navbar with Higher Contrast */
+.navbar {
+  background-color: #1a252f; /* Darker for better contrast */
+  color: #ffffff;
+  padding: 12px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Controls Section */
+.controls {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap: 10px;
+  padding: 10px;
+}
+
+.controls button {
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: 0.2s;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* Light Mode Buttons */
+.light-mode .controls button {
+  background-color: #0077cc; /* Higher contrast blue */
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/* Dark Mode Buttons */
+.dark-mode .controls button {
+  background-color: #444; /* Slightly lighter for readability */
+  color: #ffffff;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Button Hover Effect */
+.controls button:hover {
+  opacity: 0.9;
+}
+
+/* Main Layout */
+.main-layout {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+/* Sidebar Styling */
+.sidebar {
+  width: 250px;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s, color 0.3s;
+  font-weight: bold;
+}
+
+.left {
+  border-right: 2px solid #a3a3a3;
+}
+
+.right {
+  border-left: 2px solid #a3a3a3;
+}
+
+/* Light Mode Sidebar */
+.light-mode .sidebar {
+  background-color: #e6e6e6; /* More contrast than #f4f4f4 */
+  color: #000;
+}
+
+/* Dark Mode Sidebar */
+.dark-mode .sidebar {
+  background-color: #333333; /* Improved contrast */
+  color: #ffffff;
+}
+
+/* Main Content */
+.content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Terminal Window */
+.terminal {
+  background-color: #262626; /* Slightly lighter for readability */
+  color: white;
+  padding: 12px;
+  overflow-y: auto;
+  border-top: 2px solid #0056b3; /* More contrast */
+  position: relative;
+  resize: vertical;
+}
+
+/* Resizer for Terminal */
+.resizer {
+  height: 5px;
+  background: #0056b3; /* Higher contrast blue */
+  cursor: ns-resize;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+/* Light Mode */
+.light-mode {
+  background-color: #f9f9f9; /* Higher contrast than #ffffff */
+  color: #000000;
+}
+
+/* Dark Mode */
+.dark-mode {
+  background-color: #121212; /* Better contrast in dark mode */
+  color: #ffffff;
 }
