@@ -45,6 +45,9 @@ const App = () => {
             <Terminal
               height={terminalHeight}
               setHeight={setTerminalHeight}
+        showTerminal={showTerminal}
+        setShowTerminal={setShowTerminal}
+              
               onClose={() => setShowTerminal(false)}
             />
           </Suspense>

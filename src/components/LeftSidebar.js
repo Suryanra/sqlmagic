@@ -23,7 +23,7 @@ const LeftSidebar = () => {
         </button>
       </div>
       <div className="side-bar-content-to-render">
-        <div>{activeTab === "schema" ? <SchemaComponent/> : <HistoryComponent/>}</div>
+          {activeTab === "schema" ? <SchemaComponent/> : <HistoryComponent/>}
       </div>
       
     </aside>

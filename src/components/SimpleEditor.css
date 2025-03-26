@@ -1,0 +1,33 @@
+/* SQL Editor Container */
+.sql-editor-container {
+  width:95%;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: "Courier New", monospace;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.editor-title {
+  font-size: 28px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.sql-textarea {
+  width: 96%;
+  height: 200px;
+  padding: 15px;
+  font-family: "Courier New", monospace;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  transition: border 0.3s;
+  resize: none;
+  background-color: rgb(193, 188, 188);
+}
+
+

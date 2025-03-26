@@ -1,10 +1,10 @@
 import React from 'react'
 import './MainContent.css'
-// import TextEditor from './TextEditor'
+import SimpleEditor from './SimpleEditor'
 const MainContent = () => {
   return (
     <div className='main-content'>
-      {/* <TextEditor/> */}
+      <SimpleEditor/>
     </div>
   )
 }

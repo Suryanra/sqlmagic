@@ -1,7 +1,7 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect,useContext } from "react";
 import { BsLayoutSidebar, BsReverseLayoutSidebarReverse } from "react-icons/bs";
 import { TfiLayoutSidebarNone, TfiLayoutSidebar2 } from "react-icons/tfi";
-// import "./Navbar.css"; // Import the CSS file
+import AppContext from "../context/AppContext";
 
 const Navbar = React.memo(({
   showLeftSidebar,
@@ -16,7 +16,7 @@ const Navbar = React.memo(({
   const [showLayoutOptions, setShowLayoutOptions] = useState(false);
   const layoutRef = useRef(null);
   const layoutButtonRef = useRef(null);
-
+const {setHistory,query,history}=useContext(AppContext);
   useEffect(() => {
     function handleClickOutside(event) {
       if (layoutRef.current && !layoutRef.current.contains(event.target)) {
@@ -29,6 +29,18 @@ const Navbar = React.memo(({
     };
   }, []);
 
+  const handleQueryExecution=()=>{
+    setShowTerminal(true);
+setHistory((prevHistory) => {
+  if (!prevHistory.includes(query)) {
+    return [...prevHistory, query];
+  }
+
+  return prevHistory; 
+});
+
+  console.log(history,query)
+  }
   return (
     <nav className="navbar">
       <div className="controls">
@@ -55,7 +67,7 @@ const Navbar = React.memo(({
             </button>
           </div>
         )}
-        <button onClick={() => setShowTerminal(!showTerminal)}>Execute</button>
+        <button onClick={handleQueryExecution }>Execute</button>
         <button onClick={() => setDarkMode(!darkMode)}>
           {darkMode ? "Light Mode" : "Dark Mode"}
         </button>

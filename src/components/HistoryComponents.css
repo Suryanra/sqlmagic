@@ -1,0 +1,25 @@
+.history-container{
+      width:100%;
+      height:100%;
+      display: flex;
+      flex-direction: column;
+      row-gap: 5px;
+      box-sizing: border-box;
+      overflow-y: auto;
+}
+
+.history-query {
+  cursor: pointer;
+  border: 1px solid rgb(170, 164, 164);
+  font-weight: 100;
+  width: 100%;
+  padding: 5px;
+  box-sizing: border-box;
+  transition: outline 0.3s;
+  border-radius: 5px;
+}
+
+.history-query:hover {
+  outline: 2px solid rgb(170, 164, 164);  /* Increased outline */
+  outline-offset: -1px;  /* Aligns the outline with the border */
+}

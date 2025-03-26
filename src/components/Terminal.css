@@ -1,0 +1,61 @@
+.close-icon{
+      scale:2;
+      cursor: pointer;
+}
+/* Terminal container */
+.terminal {
+  display: flex;
+  flex-direction: column;
+  background: #2d2d2d;
+  color: white;
+  border: 1px solid #444;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+    -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.terminal  ::-webkit-scrollbar{
+      display: none;
+}
+/* Sticky header with resizer and close icon */
+.terminal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #1f1f1f;
+  /* padding: 10px; */
+  border-bottom: 1px solid #444;
+  position: sticky;         /* Sticky header */
+  top: 0;
+  z-index: 10;
+}
+
+/* Resizer styling */
+.resizer {
+  flex-grow: 1;
+  cursor: row-resize;
+  height: 5px;
+  background: #555;
+}
+
+.close-icon {
+  font-size: 15px;
+  cursor: pointer;
+  transition: color 0.2s;
+  padding-bottom: 10px;;
+}
+
+.terminal-content {
+  flex-grow: 1;
+  overflow: auto;        
+  max-height: calc(100% - 50px);
+  background: #1e1e1e;
+  position: relative;
+}
+
+.table-wrapper {
+  width: 100%;
+  overflow: auto;  
+}
