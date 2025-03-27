@@ -36,6 +36,10 @@ const Navbar = React.memo(({
   }, []);
 
   const handleQueryExecution = () => {
+    if(query.length<=1){
+      alert("Write the query");
+      return;
+    }
     setShowTerminal(true);
 
     setHistory((prevHistory) => {
@@ -100,7 +104,7 @@ const Navbar = React.memo(({
         {/* Dark Mode Toggle */}
         <button onClick={() => setDarkMode(!darkMode)} aria-label="Toggle Mode" >
           {darkMode ? <CiLight className="icon" /> : <MdDarkMode className="icon" />}
-          {darkMode ? " Light Mode" : " Dark Mode"}
+          {/* {darkMode ? " Light Mode" : " Dark Mode"} */}
         </button>
       </div>
     </nav>
