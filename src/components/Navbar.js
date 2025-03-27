@@ -69,23 +69,23 @@ const Navbar = React.memo(({
           ref={layoutButtonRef}
           className="layout-button"
         >
-          <AiFillLayout className="icon" /> 
+          <AiFillLayout className="icon" aria-label="Toggle Layout"/> 
           {/* Layout */}
         </button>
 
         {/* Layout Options */}
         {showLayoutOptions && (
           <div className="layout-controls" ref={layoutRef}>
-            <button onClick={() => { setShowLeftSidebar(true); setShowRightSidebar(false); }}>
+            <button onClick={() => { setShowLeftSidebar(true); setShowRightSidebar(false); }} aria-label="leftsidebar">
               <BsLayoutSidebar className="icon" />
             </button>
-            <button onClick={() => { setShowLeftSidebar(false); setShowRightSidebar(false); }}>
+            <button onClick={() => { setShowLeftSidebar(false); setShowRightSidebar(false); }}  aria-label="maincontent">
               <TfiLayoutSidebarNone className="icon" />
             </button>
-            <button onClick={() => { setShowLeftSidebar(false); setShowRightSidebar(true); }}>
+            <button onClick={() => { setShowLeftSidebar(false); setShowRightSidebar(true); }}  aria-label="rightsidebar">
               <BsReverseLayoutSidebarReverse className="icon" />
             </button>
-            <button onClick={() => { setShowLeftSidebar(true); setShowRightSidebar(true); }}>
+            <button onClick={() => { setShowLeftSidebar(true); setShowRightSidebar(true); }}  aria-label="bothsidebar">
               <TfiLayoutSidebar2 className="icon" />
             </button>
           </div>
@@ -93,14 +93,14 @@ const Navbar = React.memo(({
 
         {/* Execute Button */}
         <button onClick={handleQueryExecution}>
-          <VscRunAll className="icon" />
+          <VscRunAll className="icon" aria-label="Execute" />
            {/* Execute */}
         </button>
 
         {/* Dark Mode Toggle */}
-        <button onClick={() => setDarkMode(!darkMode)}>
+        <button onClick={() => setDarkMode(!darkMode)} aria-label="Toggle Mode" >
           {darkMode ? <CiLight className="icon" /> : <MdDarkMode className="icon" />}
-          {/* {darkMode ? " Light Mode" : " Dark Mode"} */}
+          {darkMode ? " Light Mode" : " Dark Mode"}
         </button>
       </div>
     </nav>
