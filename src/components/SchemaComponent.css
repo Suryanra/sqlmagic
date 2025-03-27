@@ -1,4 +1,4 @@
-/* Schema container */
+
 .schema-container {
   width: 100%;
   border-radius: 10px;
@@ -40,7 +40,7 @@
   text-align: left;
 }
 
-/* Table */
+
 .schema-table {
   width: 95%;
   margin-top: 4px;

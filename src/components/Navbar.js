@@ -1,7 +1,12 @@
-import React, { useState, useRef, useEffect,useContext } from "react";
+import React, { useState, useRef, useEffect, useContext } from "react";
 import { BsLayoutSidebar, BsReverseLayoutSidebarReverse } from "react-icons/bs";
 import { TfiLayoutSidebarNone, TfiLayoutSidebar2 } from "react-icons/tfi";
+import { AiFillLayout } from "react-icons/ai";
+import { VscRunAll } from "react-icons/vsc";
+import { MdDarkMode } from "react-icons/md";
+import { CiLight } from "react-icons/ci";
 import AppContext from "../context/AppContext";
+import { VscRunCoverage } from "react-icons/vsc";
 
 const Navbar = React.memo(({
   showLeftSidebar,
@@ -16,7 +21,8 @@ const Navbar = React.memo(({
   const [showLayoutOptions, setShowLayoutOptions] = useState(false);
   const layoutRef = useRef(null);
   const layoutButtonRef = useRef(null);
-const {setHistory,query,history}=useContext(AppContext);
+  const { setHistory, query, history, path, setPath } = useContext(AppContext);
+
   useEffect(() => {
     function handleClickOutside(event) {
       if (layoutRef.current && !layoutRef.current.contains(event.target)) {
@@ -29,47 +35,72 @@ const {setHistory,query,history}=useContext(AppContext);
     };
   }, []);
 
-  const handleQueryExecution=()=>{
+  const handleQueryExecution = () => {
     setShowTerminal(true);
-setHistory((prevHistory) => {
-  if (!prevHistory.includes(query)) {
-    return [...prevHistory, query];
-  }
 
-  return prevHistory; 
-});
+    setHistory((prevHistory) => {
+      if (!prevHistory.includes(query)) {
+        return [...prevHistory, query];
+      }
+      return prevHistory;
+    });
 
-  console.log(history,query)
-  }
+    if (query === "select * from customers") {
+      setPath("/data/customers.csv");
+    } else if (query === "select * from employee") {
+      setPath("/data/employee.csv");
+    } else if (query === "select * from order") {
+      setPath("/data/order.csv");
+    } else {
+      setPath("/data/order.csv");
+    }
+
+    console.log("Executing query:", query);
+  };
+
   return (
     <nav className="navbar">
+      <div>SQL-Magic</div>
       <div className="controls">
-        <button 
-          onClick={() => setShowLayoutOptions(!showLayoutOptions)} 
-          ref={layoutButtonRef} 
+
+        {/* Layout Button */}
+        <button
+          onClick={() => setShowLayoutOptions(!showLayoutOptions)}
+          ref={layoutButtonRef}
           className="layout-button"
         >
-          Layout
+          <AiFillLayout className="icon" /> 
+          {/* Layout */}
         </button>
+
+        {/* Layout Options */}
         {showLayoutOptions && (
           <div className="layout-controls" ref={layoutRef}>
             <button onClick={() => { setShowLeftSidebar(true); setShowRightSidebar(false); }}>
-              <BsLayoutSidebar />
+              <BsLayoutSidebar className="icon" />
             </button>
             <button onClick={() => { setShowLeftSidebar(false); setShowRightSidebar(false); }}>
-              <TfiLayoutSidebarNone />
+              <TfiLayoutSidebarNone className="icon" />
             </button>
             <button onClick={() => { setShowLeftSidebar(false); setShowRightSidebar(true); }}>
-              <BsReverseLayoutSidebarReverse />
+              <BsReverseLayoutSidebarReverse className="icon" />
             </button>
             <button onClick={() => { setShowLeftSidebar(true); setShowRightSidebar(true); }}>
-              <TfiLayoutSidebar2 />
+              <TfiLayoutSidebar2 className="icon" />
             </button>
           </div>
         )}
-        <button onClick={handleQueryExecution }>Execute</button>
+
+        {/* Execute Button */}
+        <button onClick={handleQueryExecution}>
+          <VscRunAll className="icon" />
+           {/* Execute */}
+        </button>
+
+        {/* Dark Mode Toggle */}
         <button onClick={() => setDarkMode(!darkMode)}>
-          {darkMode ? "Light Mode" : "Dark Mode"}
+          {darkMode ? <CiLight className="icon" /> : <MdDarkMode className="icon" />}
+          {/* {darkMode ? " Light Mode" : " Dark Mode"} */}
         </button>
       </div>
     </nav>

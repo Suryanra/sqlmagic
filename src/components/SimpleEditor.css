@@ -1,4 +1,4 @@
-/* SQL Editor Container */
+
 .sql-editor-container {
   width:95%;
   margin: 0 auto;
@@ -27,7 +27,7 @@
   outline: none;
   transition: border 0.3s;
   resize: none;
-  background-color: rgb(193, 188, 188);
+  
 }
 
 

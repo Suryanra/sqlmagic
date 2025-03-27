@@ -1,12 +1,12 @@
-import React from 'react'
+import React from "react";
+import Tabs from "./Tabs";
 import './MainContent.css'
-import SimpleEditor from './SimpleEditor'
 const MainContent = () => {
   return (
-    <div className='main-content'>
-      <SimpleEditor/>
+    <div className="main-content">
+      <Tabs />
     </div>
-  )
-}
+  );
+};
 
-export default MainContent
+export default MainContent;

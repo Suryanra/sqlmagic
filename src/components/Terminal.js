@@ -1,17 +1,23 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { IoCloseCircle } from "react-icons/io5";
 import "./Terminal.css";
 import CsvTable from "./CsvTable";
+import AppContext from "../context/AppContext";
 
 const Terminal = ({ height, setHeight, setShowTerminal }) => {
   const [csvData, setCsvData] = useState(null);
+  const { query,path} = useContext(AppContext);
 
+
+
+
+  // ✅ Fetch CSV dynamically based on path
   useEffect(() => {
     const loadCsv = async () => {
       try {
-        const response = await fetch('/data/customers.csv');  // Fetch from public folder
+        const response = await fetch(path); // ✅ Uses dynamic path
         if (!response.ok) {
-          throw new Error('Failed to load CSV');
+          throw new Error("Failed to load CSV");
         }
         const text = await response.text();
         setCsvData(text);
@@ -21,7 +27,7 @@ const Terminal = ({ height, setHeight, setShowTerminal }) => {
     };
 
     loadCsv();
-  }, []);
+  }, [path]); // ✅ Re-fetch CSV when path changes
 
   const handleMouseDown = (e) => {
     e.preventDefault();

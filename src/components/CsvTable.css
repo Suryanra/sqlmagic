@@ -18,12 +18,12 @@
   overflow-y: hidden;
   border-bottom: 1px solid #ccc;
   position: relative;
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none; 
+  scrollbar-width: none;  
 }
 
 .header-wrapper::-webkit-scrollbar {
-  display: none;  /* Chrome, Safari and Opera */
+  display: none;  
 }
 
 .header-row {
@@ -37,7 +37,6 @@
 .header-cell {
   padding: 8px 12px;
   text-align: left;
-  border-right: 1px solid #555;
   box-sizing: border-box;
   white-space: nowrap;
   overflow: hidden;
@@ -50,12 +49,12 @@
   overflow-x: auto;
   overflow-y: auto;
   position: relative;
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none;
+  scrollbar-width: none;  
 }
 
 .body-container::-webkit-scrollbar {
-  display: none;  /* Chrome, Safari and Opera */
+  display: none; 
 }
 
 .row {

@@ -20,6 +20,41 @@
 }
 
 .history-query:hover {
-  outline: 2px solid rgb(170, 164, 164);  /* Increased outline */
-  outline-offset: -1px;  /* Aligns the outline with the border */
+  outline: 2px solid rgb(170, 164, 164);  
+  outline-offset: -1px; 
 }
+
+.history-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+}
+
+.history-query {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+
+
+.copy-btn {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 12px;
+  margin-left: 10px;
+}
+
+.copy-btn:hover {
+  background: #0056b3;
+}
+
