@@ -7,15 +7,15 @@ A **React.js** web application that allows users to run SQL queries, view mock q
 ## 🚀 **Features**
 
 ✅ Execute SQL queries and display results in a table format.  
-✅ Toggle between **predefined SQL queries** and their corresponding table data.  
-✅ View mock data from **CSV files**()with lazy Loading.
-✅ Interactive **dropdowns** for table selection.  
-✅ Smooth and stylish UI with **CSS styling** and dark mode compatibility. 
-✅ Store history so that can be used any time if needed again.
-✅ AI feature to convert Natural language to sql Query any time you need.
-✅ Help Section
-✅ Multiple Tab to run multiple Query as and when needed.
-✅ Different Layout options as per the user requirement.
+✅ Toggle between predefined SQL queries and their corresponding table data.  
+✅ View mock data from CSV files with lazy Loading.<br>
+✅ Interactive dropdowns for table selection.<br>
+✅ Smooth and stylish UI with CSS styling and dark mode compatibility.<br>
+✅ Store history so that can be used any time if needed again.<br>
+✅ AI feature to convert Natural language to sql Query any time you need.<br>
+✅ Help Section<br>
+✅ Multiple Tab to run multiple Query as and when needed.<br>
+✅ Different Layout options as per the user requirement.<br>
 
 
 ---
