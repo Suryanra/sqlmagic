@@ -30,6 +30,40 @@ A **React.js** web application that allows users to run SQL queries, view mock q
 
 ---
 
+
+## ** Measuring Page Load Time**  
+### **Tools Used for Measurement:**  
+We measured the page load time using:  
+1. **Google Lighthouse (Chrome DevTools)**  
+   - Open DevTools (`F12` in Chrome).  
+   - Navigate to the **Lighthouse** tab.  
+   - Run an audit to get metrics like **FCP, LCP, CLS, TBT, and INP**.  
+2. **Network Tab in Chrome DevTools**  
+   - Open DevTools → **Network** tab.  
+   - Reload the page and check **DOMContentLoaded** and **Load Time**.  
+
+
+
+### **Page Load Metrics:**  
+- **Largest Contentful Paint (LCP):** ~0.36s  
+- **Cumulative Layout Shift (CLS):** 0.09 
+- **Load time:** ~646ms  
+
+## **Optimizations for Performance Improvement**  
+To enhance performance and reduce load time, we implemented the following optimizations:  
+
+### **A. JavaScript & Code Optimization**   
+✅ **Lazy loading components** (`React.lazy` + `Suspense`) for faster initial load.  
+✅ **Removed unused JavaScript** with Tree Shaking.  
+
+### **B. Image & Asset Optimization**  
+✅ **Converted images to WebP** format for better compression.  
+✅ **Used lazy loading for images** (`loading="lazy"` attribute).  
+
+
+
+
+
 ## ⚙️ **Installation Instructions**
 
 ### ✅ 1. Clone the Repository
