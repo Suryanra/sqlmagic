@@ -76,14 +76,18 @@ const Tabs = ({ setShowTerminal, showTerminal }) => {
       return prevHistory;
     });
 
-    if (query === "select * from customers") {
+    if (query === "select * from customers;") {
       setPath("/data/customers.csv");
-    } else if (query === "select * from employee") {
+    } else if (query === "select * from employees;") {
       setPath("/data/employee.csv");
-    } else if (query === "select * from order") {
-      setPath("/data/order.csv");
-    } else {
-      setPath("/data/order.csv");
+    } else if (query === "select * from teachers;") {
+      setPath("/data/teachers.csv");
+    }else if (query === "select * from courses") {
+      setPath("/data/courses.csv");
+    } else if (query === "select * from orders;") {
+      setPath("/data/orders.csv");
+    }else {
+      setPath("/data/orders.csv");
     }
 
     console.log("Executing query:", query);
