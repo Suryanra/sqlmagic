@@ -10,17 +10,11 @@
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
   overflow: hidden;
     -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 .terminal  ::-webkit-scrollbar{
       display: none;
-}
-.terminal {
-    -ms-overflow-style: none;  /* For IE and Edge */
-}
-
-.terminal::-webkit-scrollbar {
-    display: none; /* For Chrome, Safari, and newer Edge */
 }
 
 .terminal-header {

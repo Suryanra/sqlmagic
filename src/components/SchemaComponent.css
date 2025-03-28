@@ -76,6 +76,7 @@
 }
 .schema-container {
   overflow-y: auto;
+  scrollbar-width: none;  
   -ms-overflow-style: none; 
 }
 .schema-container::-webkit-scrollbar {

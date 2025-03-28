@@ -27,11 +27,7 @@ const HistoryComponent = () => {
             <img
               src="/copyicon.jpg"
               alt="Copy"
-              
               className="copy-icon"
-              loading="lazy"
-              width="12"
-              height="12"
               onClick={() => handleCopy(query, index)}
             />
             
