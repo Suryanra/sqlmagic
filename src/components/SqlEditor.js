@@ -1,5 +1,5 @@
 import React from "react";
-import "./SqlEditor.css";
+import "./style/SqlEditor.css";
 
 const SqlEditor = ({ query, updateQuery }) => {
   return (

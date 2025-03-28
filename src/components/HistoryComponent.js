@@ -1,20 +1,19 @@
 import React, { useContext, useState } from "react";
 import AppContext from "../context/AppContext";
-import "./HistoryComponents.css";
+import "./style/HistoryComponents.css";
 
 const HistoryComponent = () => {
   const { history, setQuery } = useContext(AppContext);
-  const [copiedIndex, setCopiedIndex] = useState(null);  // Track copied item index
+  const [copiedIndex, setCopiedIndex] = useState(null);  
 
   const handleClick = (query) => {
     setQuery(query);
   };
 
   const handleCopy = (query, index) => {
-    navigator.clipboard.writeText(query); // Copy to clipboard
+    navigator.clipboard.writeText(query); 
     setCopiedIndex(index);
 
-    // Reset "Copied!" message after 2 seconds
     setTimeout(() => setCopiedIndex(null), 2000);
   };
 
@@ -32,7 +31,7 @@ const HistoryComponent = () => {
             />
             
 
-            {/* Show "Copied!" message only for the copied index */}
+            
             {copiedIndex === index && <span className="copied-text">Copied!</span>}
           </div>
         ))}

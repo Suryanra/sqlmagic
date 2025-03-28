@@ -45,7 +45,7 @@
 
 .copy-btn {
   background: #007bff;
-  color: white;
+  color:var(--color-white);
   border: none;
   padding: 5px 10px;
   border-radius: 5px;

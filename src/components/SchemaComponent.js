@@ -1,6 +1,6 @@
 import React from "react";
 import schemaData from "./schemaData"; 
-import "./SchemaComponent.css"; 
+import "./style/SchemaComponent.css"; 
 import TableDropdown from "./TableDropdown";
 const SchemaComponent = ({setShowTerminal, showTerminal }) => {
   return (

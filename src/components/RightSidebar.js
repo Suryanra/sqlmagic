@@ -4,7 +4,7 @@ import Help from "./Help";
 import { FaDatabase } from "react-icons/fa";
 import { MdLiveHelp } from "react-icons/md";
 import { SiConvertio } from "react-icons/si";
-import './RightSidebar.css'
+import './style/RightSidebar.css'
 const RightSidebar = () => {
   
   const [activeTab, setActiveTab] = useState("schema");

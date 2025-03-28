@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./LeftSidebar.css";
+import "./style/LeftSidebar.css";
 import SchemaComponent from "./SchemaComponent";
 import HistoryComponent from "./HistoryComponent";
 import { FaDatabase } from "react-icons/fa";

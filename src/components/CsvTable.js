@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback, useRef } from "react";
 import Papa from "papaparse";
 import { FixedSizeList } from "react-window";
-import "./CsvTable.css";
+import "./style/CsvTable.css";
 
 const CsvTable = ({ csvFile }) => {
   const [data, setData] = useState([]);
@@ -12,7 +12,7 @@ const CsvTable = ({ csvFile }) => {
   const bodyRef = useRef(null);
   const listRef = useRef(null);
 
-  // Parse CSV and load it into state
+
   useEffect(() => {
     const parseCsv = async () => {
       Papa.parse(csvFile, {
@@ -36,12 +36,12 @@ const CsvTable = ({ csvFile }) => {
     parseCsv();
   }, [csvFile]);
 
-  // Calculate total table width
+  
   const totalWidth = headers.reduce((sum, _, index) => {
     return sum + (columnWidths[index] || 150);
   }, 0);
 
-  // Synchronize horizontal scrolling between header and body
+  
   useEffect(() => {
     const bodyElement = bodyRef.current;
     const headerElement = headerRef.current;
@@ -94,7 +94,6 @@ const CsvTable = ({ csvFile }) => {
 
   return (
     <div className="table-container" ref={scrollContainerRef}>
-      {/* Header with synchronized horizontal scroll */}
       <div 
         className="header-wrapper"
         ref={headerRef}
@@ -118,7 +117,7 @@ const CsvTable = ({ csvFile }) => {
         </div>
       </div>
 
-      {/* Body with virtualized scrolling */}
+      
       <div className="body-container" ref={bodyRef}>
         <FixedSizeList
           height={600}

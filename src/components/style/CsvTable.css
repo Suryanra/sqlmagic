@@ -28,7 +28,7 @@
 .header-row {
   display: flex;
   background: #3a3a3a;
-  color: white;
+  color:var(--color-white);
   font-weight: bold;
   height: 35px;
 }

@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import SqlEditor from "./SqlEditor";
-import "./Tabs.css";
+import "./style/Tabs.css";
 import AppContext from "../context/AppContext";
 import { IoIosAddCircleOutline } from "react-icons/io";
 import { VscRunAll } from "react-icons/vsc";
@@ -152,7 +152,7 @@ const Tabs = ({ setShowTerminal, showTerminal }) => {
         )}
       </div>
 
-      {/* Place Tooltip component at the root */}
+      
       <Tooltip id="add-tab-tooltip" place="bottom" style={{fontSize:"0.6rem"}} />
       <Tooltip id="execute-tooltip" place="bottom" style={{fontSize:"0.6rem"}} />
     </div>

@@ -1,6 +1,5 @@
 import React, { useState, lazy, Suspense } from "react";
 import "./App.css";
-import "./components/Terminal.css";
 import Navbar from "./components/Navbar";
 import MainContent from "./components/MainContent";
 

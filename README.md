@@ -97,7 +97,8 @@ npm start
 │   └── favicon.ico
 │
 ├── src                    
-│   ├── components         
+│   ├── components   
+│   │   └── style      
 │   ├── context            
 │   │   └── AppContext.js
 │   │   └── AppPrvider.js

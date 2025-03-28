@@ -38,13 +38,13 @@ const NlptoSql = () => {
                   onClick={() => {
                     navigator.clipboard.writeText(generatedSQL);
                     setCopied(true);
-                    setTimeout(() => setCopied(false), 2000); // Hide message after 2 sec
+                    setTimeout(() => setCopied(false), 2000);
                   }}
                 />
                 {copied && <span className="copied-text">Copied!</span>}
               </div>
 
-              {/* Explanation Section */}
+              
               <label className="sql-label">Explanation</label>
               <pre className="explanation-text">
                 This is a basic query that selects all columns from the detected

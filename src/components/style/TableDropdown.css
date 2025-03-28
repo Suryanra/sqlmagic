@@ -1,9 +1,8 @@
-/* Light mode styles */
+
 .my-dropdown {
   font-family: Arial, sans-serif;
 }
 
-/* Control bar */
 .my-control {
   background-color: #f0f0f0;    
   color: #333;                  
@@ -15,7 +14,7 @@
 
 .my-control:hover {
   background-color: #007bff;    
-  color: white;
+  color:var(--color-white);
 }
 
 /* Menu */
@@ -38,19 +37,14 @@
 
 .my-option:hover {
   background-color: #457eda;    
-  color: white;
+  color:var(--color-white);
 }
 
-/* ---------------------------- */
-/* 🎯 Dark Mode Styles */
-/* ---------------------------- */
 
-/* Dark mode wrapper */
 .dark-mode .my-dropdown {
   font-family: Arial, sans-serif;
 }
 
-/* Control bar in dark mode */
 .dark-mode .my-control {
   background-color: var(--dark-mode-bg-color);
   color: #f0f0f0;             
@@ -62,10 +56,9 @@
 
 .dark-mode .my-control:hover {
   background-color: #457eda;    
-  color: white;
+color:var(--color-white);
 }
 
-/* Menu in dark mode */
 .dark-mode .my-menu {
   background: #333;             
   border: 1px solid #555;
@@ -73,7 +66,7 @@
   color: #f0f0f0;
 }
 
-/* Options in dark mode */
+
 .dark-mode .my-option {
   background: #333;            
   color: #f0f0f0;
@@ -82,10 +75,9 @@
 
 .dark-mode .my-option:hover {
   background: #007bff;        
-  color: white;
+  color:var(--color-white);
 }
 
-/* Ensures react-dropdown's internal option class is properly styled */
 .dark-mode .Dropdown-option {
   color: #f0f0f0;            
 }
@@ -98,5 +90,5 @@
 
 .dark-mode .Dropdown-option.is-selected {
   background-color: rgb(84, 84, 84);
-  color: white;  /* Optional: Change text color for better visibility */
+color:var(--color-white);
 }

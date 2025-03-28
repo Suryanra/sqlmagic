@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext } from "react";
 import { IoCloseCircle } from "react-icons/io5";
-import "./Terminal.css";
+import "./style/Terminal.css";
 import CsvTable from "./CsvTable";
 import AppContext from "../context/AppContext";
 
@@ -11,11 +11,11 @@ const Terminal = ({ height, setHeight, setShowTerminal }) => {
 
 
 
-  // ✅ Fetch CSV dynamically based on path
+  
   useEffect(() => {
     const loadCsv = async () => {
       try {
-        const response = await fetch(path); // ✅ Uses dynamic path
+        const response = await fetch(path); 
         if (!response.ok) {
           throw new Error("Failed to load CSV");
         }
@@ -27,7 +27,7 @@ const Terminal = ({ height, setHeight, setShowTerminal }) => {
     };
 
     loadCsv();
-  }, [path]); // ✅ Re-fetch CSV when path changes
+  }, [path]); 
 
   const handleMouseDown = (e) => {
     e.preventDefault();
@@ -46,13 +46,13 @@ const Terminal = ({ height, setHeight, setShowTerminal }) => {
 
   return (
     <div className="terminal" style={{ height: `${height}px` }}>
-      {/* Sticky header */}
+      
       <div className="terminal-header">
         <div className="resizer" onMouseDown={handleMouseDown}></div>
         <IoCloseCircle className="close-icon" onClick={() => setShowTerminal(false)} />
       </div>
 
-      {/* Scrollable content */}
+      
       <div className="terminal-content">
         {csvData ? (
           <div className="table-wrapper">

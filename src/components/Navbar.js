@@ -41,17 +41,16 @@ const Navbar = React.memo(({
     <nav className="navbar">
       <div>SQL-Magic</div>
       <div className="controls">
-        {/* Layout Button */}
         <button
           onClick={() => setShowLayoutOptions(!showLayoutOptions)}
           ref={layoutButtonRef}
           className="layout-button"
         >
           <AiFillLayout className="icon" aria-label="Toggle Layout"/> 
-          {/* Layout */}
+          
         </button>
 
-        {/* Layout Options */}
+        
         {showLayoutOptions && (
           <div className="layout-controls" ref={layoutRef}>
             <button onClick={() => { setShowLeftSidebar(true); setShowRightSidebar(false); }} aria-label="leftsidebar">
@@ -69,16 +68,10 @@ const Navbar = React.memo(({
           </div>
         )}
 
-        {/* Execute Button */}
-        {/* <button onClick={handleQueryExecution}>
-          <VscRunAll className="icon" aria-label="Execute" />
-           Execute
-        </button> */}
 
-        {/* Dark Mode Toggle */}
         <button onClick={() => setDarkMode(!darkMode)} aria-label="Toggle Mode" >
           {darkMode ? <CiLight className="icon" /> : <MdDarkMode className="icon" />}
-          {/* {darkMode ? " Light Mode" : " Dark Mode"} */}
+          
         </button>
       </div>
     </nav>
