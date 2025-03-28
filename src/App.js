@@ -30,7 +30,12 @@ const App = () => {
 
       <div className="main-layout">
         <Suspense fallback={<div>Loading Left Sidebar...</div>}>
-          {showLeftSidebar && <LeftSidebar />}
+          {showLeftSidebar && (
+            <LeftSidebar
+              showTerminal={showTerminal}
+              setShowTerminal={setShowTerminal}
+            />
+          )}
         </Suspense>
 
         <main className="content">

@@ -4,7 +4,7 @@ import SchemaComponent from "./SchemaComponent";
 import HistoryComponent from "./HistoryComponent";
 import { FaDatabase } from "react-icons/fa";
 import { FaHistory } from "react-icons/fa";
-const LeftSidebar = () => {
+const LeftSidebar = ({ setShowTerminal, showTerminal }) => {
   const [activeTab, setActiveTab] = useState("schema");
 
   return (
@@ -21,12 +21,19 @@ const LeftSidebar = () => {
           className={activeTab === "history" ? "active" : ""}
           onClick={() => setActiveTab("history")}
         >
-          <FaHistory className="databaseicon"/>
+          <FaHistory className="databaseicon" />
           History
         </button>
       </div>
       <div className="side-bar-content-to-render">
-        {activeTab === "schema" ? <SchemaComponent /> : <HistoryComponent />}
+        {activeTab === "schema" ? (
+          <SchemaComponent
+            showTerminal={showTerminal}
+            setShowTerminal={setShowTerminal}
+          />
+        ) : (
+          <HistoryComponent />
+        )}
       </div>
     </aside>
   );

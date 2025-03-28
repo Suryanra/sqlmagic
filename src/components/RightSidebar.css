@@ -92,6 +92,12 @@
   background-color: #1d4ed8;
 }
 
+.dark-mode .generate-btn{
+  background-color: #444444;
+}
+.dark-mode .generate-btn:hover{
+   background-clip: #444444;
+}
 
 .sql-output {
   margin-top: 12px;
@@ -113,6 +119,12 @@
 .help-text {
   font-size: 14px;
   color: #4b5563;
+}
+.dark-mode .help-text {
+  color: #d4d4d4;
+}
+.dark-mode li{
+  color: #ccc;
 }
 
 .help-list {

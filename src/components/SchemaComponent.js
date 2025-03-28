@@ -1,11 +1,12 @@
 import React from "react";
-import schemaData from "./schemaData"; // Assuming your schema data is stored here
-import "./SchemaComponent.css"; // Import styles
-
-const SchemaComponent = () => {
+import schemaData from "./schemaData"; 
+import "./SchemaComponent.css"; 
+import TableDropdown from "./TableDropdown";
+const SchemaComponent = ({setShowTerminal, showTerminal }) => {
   return (
     <div className="schema-container">
-      <h2 className="schema-title">Database Schema</h2>
+      <div className="schema-title">Database Schema</div>
+      <TableDropdown setShowTermianl={setShowTerminal} />
       {schemaData.map((table, index) => (
         <div key={index} className="table-box">
           <div className="table-header">{table.tableName}</div>

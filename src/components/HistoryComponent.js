@@ -24,13 +24,13 @@ const HistoryComponent = () => {
         history.map((query, index) => (
           <div key={index} className="sql-text-container">
             <pre className="sql-text">{query.length < 26 ? query : query.slice(0, 25) + "..."}</pre>
-
             <img
               src="/copyicon.jpg"
               alt="Copy"
               className="copy-icon"
               onClick={() => handleCopy(query, index)}
             />
+            
 
             {/* Show "Copied!" message only for the copied index */}
             {copiedIndex === index && <span className="copied-text">Copied!</span>}

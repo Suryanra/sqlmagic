@@ -1,0 +1,102 @@
+/* Light mode styles */
+.my-dropdown {
+  font-family: Arial, sans-serif;
+}
+
+/* Control bar */
+.my-control {
+  background-color: #f0f0f0;    
+  color: #333;                  
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  transition: background 0.3s;
+}
+
+.my-control:hover {
+  background-color: #007bff;    
+  color: white;
+}
+
+/* Menu */
+.my-menu {
+  background: #fff;            
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-height: 200px;
+  border-radius: 10px;
+  overflow-y: auto;
+  padding: 5px;
+}
+
+/* Options */
+.my-option {
+  padding: 10px;
+  color: #333;
+  transition: background 0.3s;
+}
+
+.my-option:hover {
+  background-color: #457eda;    
+  color: white;
+}
+
+/* ---------------------------- */
+/* 🎯 Dark Mode Styles */
+/* ---------------------------- */
+
+/* Dark mode wrapper */
+.dark-mode .my-dropdown {
+  font-family: Arial, sans-serif;
+}
+
+/* Control bar in dark mode */
+.dark-mode .my-control {
+  background-color: var(--dark-mode-bg-color);
+  color: #f0f0f0;             
+  border: 1px solid #555;
+  border-radius: 8px;
+  padding: 10px;
+  transition: background 0.3s;
+}
+
+.dark-mode .my-control:hover {
+  background-color: #457eda;    
+  color: white;
+}
+
+/* Menu in dark mode */
+.dark-mode .my-menu {
+  background: #333;             
+  border: 1px solid #555;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  color: #f0f0f0;
+}
+
+/* Options in dark mode */
+.dark-mode .my-option {
+  background: #333;            
+  color: #f0f0f0;
+  transition: background 0.3s;
+}
+
+.dark-mode .my-option:hover {
+  background: #007bff;        
+  color: white;
+}
+
+/* Ensures react-dropdown's internal option class is properly styled */
+.dark-mode .Dropdown-option {
+  color: #f0f0f0;            
+}
+
+.dark-mode .Dropdown-option:hover {
+  background: #457eda;        
+  color: #fff;
+}
+
+
+.dark-mode .Dropdown-option.is-selected {
+  background-color: rgb(84, 84, 84);
+  color: white;  /* Optional: Change text color for better visibility */
+}

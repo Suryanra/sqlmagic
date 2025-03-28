@@ -37,7 +37,9 @@
   font-size: 16px;
   position: relative;
 }
-
+.dark-mode .sidebar-navbar button{
+  color:white;
+}
 
 
 .sidebar-navbar button.active::after {

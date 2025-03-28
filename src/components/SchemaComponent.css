@@ -16,10 +16,17 @@
  .schema-title {
   font-size: 18px;
   font-weight: bold;
+  padding-top: 10px;;
   margin-bottom: 10px;
   text-align: left;
   left:10px;
   color:rgb(107 114 128)
+}
+.dark-mode .schema-title{
+  color:white;
+}
+.dark-mode .table-header{
+  color:white;
 }
 .table-box {
   box-sizing: border-box;
@@ -27,6 +34,10 @@
   border-radius:5px;
   border:1px solid #e6e6e6;
   padding:5px ;
+}
+
+.dark-mode .table-box{
+  border:1px solid grey;
 }
 .table-header {
   font-size: 14px;
@@ -38,18 +49,19 @@
 .schema-table {
   width: 100%;
   font-size: 12px;
-  /* border:1px solid grey; */
   border-collapse: collapse;
 }
 .schema-table th,
 .schema-table td {
   padding: 4px;
   text-align: left;
-  /* border-bottom: 1px solid #444; */
 }
 .schema-table tr .col-name{
   font-weight: 500;
   color:#020817;
+}
+.dark-mode .schema-table tr .col-name{
+  color:#ffffff;
 }
 .schema-table tr .col-type{
   font-weight: 500;
@@ -58,6 +70,9 @@
 
 .schema-table tbody{
   color:#606874
+}
+.dark-mode .schema-table tbody{
+  color:rgba(255, 255, 255, 0.669);
 }
 .schema-container {
   overflow-y: auto;
