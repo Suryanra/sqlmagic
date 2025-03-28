@@ -6,12 +6,9 @@
   flex-direction: column;
   overflow: hidden;
   -ms-overflow-style: none;
-  scrollbar-width: none;
 
 }
-.table-container ::-webkit-scrollbar{
-      display: none;
-}
+
 
 .header-wrapper {
   flex-shrink: 0;
@@ -20,7 +17,7 @@
   border-bottom: 1px solid #ccc;
   position: relative;
   -ms-overflow-style: none; 
-  scrollbar-width: none;  
+  /* scrollbar-width: none;   */
 }
 
 .header-wrapper::-webkit-scrollbar {
@@ -51,7 +48,7 @@
   overflow-y: auto;
   position: relative;
   -ms-overflow-style: none;
-  scrollbar-width: none;  
+  /* scrollbar-width: none;   */
 }
 
 .body-container::-webkit-scrollbar {

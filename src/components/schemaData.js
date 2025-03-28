@@ -31,7 +31,7 @@ const schemaData = [
     columns: [
       { name: "id", type: "INT PRIMARY KEY AUTO_INCREMENT" },
       { name: "course_name", type: "VARCHAR(255)" },
-      { name: "teacher_id", type: "INT FOREIGN KEY REFERENCES Teacher(id)" },
+      { name: "teacher_id", type: "INT FOREIGN KEY REFERENCES" },
       { name: "duration", type: "VARCHAR(50)" },
     ],
   },

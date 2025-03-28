@@ -29,7 +29,6 @@
   overflow-x: auto;  
   display: flex;
   white-space: nowrap;
-  scrollbar-width: none; 
   box-sizing: border-box;
 }
 

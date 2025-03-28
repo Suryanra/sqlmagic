@@ -8,6 +8,11 @@
   --text-light: #ffffff;
   --text-dark: #333333; */
 }
+@media (prefers-color-scheme: dark) {
+  :root {
+    background-color: #000000;
+  }
+}
 
 
 .container {
@@ -15,6 +20,7 @@
   flex-direction: column;
   height: 100vh;
   transition: background-color 0.3s, color 0.3s;
+  font-display: swap;
 }
 
 

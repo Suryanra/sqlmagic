@@ -14,10 +14,12 @@ const NlptoSql = () => {
   };
   return (
         <div className="nl-to-sql">
-          <label className="input-label">Ask in natural language</label>
+          <label className="input-label" htmlFor="nlp-to-sql">Ask in natural language</label>
           <textarea
+          id="nlp-to-sql"
             className="textarea-input"
-            aria-label="nlp-to-sql" 
+            aria-label="nlp-to-sql"
+            name="nlp-to-sql" 
             rows="3"
             value={inputText}
             onChange={(e) => setInputText(e.target.value)}
@@ -34,6 +36,9 @@ const NlptoSql = () => {
                 <img
                   src="/copyicon.jpg"
                   alt="Copy"
+              loading="lazy"
+              width="12"
+              height="12"
                   className="copy-icon"
                   onClick={() => {
                     navigator.clipboard.writeText(generatedSQL);
