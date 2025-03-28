@@ -111,6 +111,11 @@ npm start
 -Add the Help section for the users.
 
 
+---
+## 🖼️ **Performance Metrics**
+
+![alt text](image-7.png)
+
 
 
 ---
