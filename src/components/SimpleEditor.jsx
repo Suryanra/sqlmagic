@@ -21,6 +21,7 @@ const SimpleEditor = () => {
 
       <form onSubmit={handleSubmit}>
         <textarea
+          aria-label="sql-query"
           value={query}
           onChange={handleInputChange}
           className="sql-textarea"

@@ -103,9 +103,11 @@ const Tabs = ({ setShowTerminal, showTerminal }) => {
               {tabs.length > 1 && (
                 <button
                   className="close-btn"
+                  aria-label="Close-btn"
                   onClick={(e) => {
                     e.stopPropagation();
                     removeTab(tab.id);
+                    
                   }}
                 >
                   ✖
@@ -120,6 +122,7 @@ const Tabs = ({ setShowTerminal, showTerminal }) => {
             className="add-tab-btn"
             data-tooltip-id="add-tab-tooltip"
             data-tooltip-content="Add New Tab"
+            aria-label="add-tab-btn"
             onClick={addTab}
           >
             <IoIosAddCircleOutline />
@@ -129,6 +132,7 @@ const Tabs = ({ setShowTerminal, showTerminal }) => {
             className="add-tab-btn"
             data-tooltip-id="execute-tooltip"
             data-tooltip-content="Execute Query"
+            aria-label="execute-btn"
             onClick={handleQueryExecution}
           >
             <VscRunAll />

@@ -5,6 +5,7 @@ const SqlEditor = ({ query, updateQuery }) => {
   return (
     <div className="sql-editor">
       <textarea
+      aria-label="sql-query" 
         className="editor-input"
         value={query}
         onChange={(e) => updateQuery(e.target.value)}

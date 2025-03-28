@@ -17,6 +17,7 @@ const NlptoSql = () => {
           <label className="input-label">Ask in natural language</label>
           <textarea
             className="textarea-input"
+            aria-label="nlp-to-sql" 
             rows="3"
             value={inputText}
             onChange={(e) => setInputText(e.target.value)}
