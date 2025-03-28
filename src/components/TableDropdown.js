@@ -5,7 +5,7 @@ import './TableDropdown.css'
 import AppContext from "../context/AppContext";
 
 const TableDropdown = ({ setShowTermianl}) => {
-  const options = ["Employee Data", "Teacher Data", "Orders Data", "Courses Data"];
+  const options = ["Employee Data", "Customer Data", "Orders Data", "Courses Data"];
   const [selectedOption, setSelectedOption] = useState(options[0]);
   const { setQuery,setPath,query } = useContext(AppContext);
 

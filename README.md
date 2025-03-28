@@ -31,7 +31,7 @@ A **React.js** web application that allows users to run SQL queries, view mock q
 ---
 
 
-## ** Measuring Page Load Time**  
+## **Measuring Page Load Time**  
 ### **Tools Used for Measurement:**  
 We measured the page load time using:  
 1. **Google Lighthouse (Chrome DevTools)**  
