@@ -2,26 +2,32 @@ import React, { useContext, useEffect, useState } from "react";
 import SqlEditor from "./SqlEditor";
 import "./Tabs.css";
 import AppContext from "../context/AppContext";
+import { IoIosAddCircleOutline } from "react-icons/io";
+import { VscRunAll } from "react-icons/vsc";
+import { Tooltip } from "react-tooltip";
 
-const Tabs = () => {
-  const [tabs, setTabs] = useState([{ id: 1, title: "Query 1", query: "" }]);
+
+
+const Tabs = ({ setShowTerminal, showTerminal }) => {
+
+  const [tabs, setTabs] = useState([{ id: 1, title: "Tab 1", query: "" }]);
   const [activeTab, setActiveTab] = useState(1);
-  const { query, setQuery } = useContext(AppContext);
+  const { query, setQuery, setHistory, history, path, setPath } =
+    useContext(AppContext);
 
-  // Sync the active tab's query with Context API when switching tabs
   useEffect(() => {
     const activeTabData = tabs.find((tab) => tab.id === activeTab);
     if (activeTabData) {
       setQuery(activeTabData.query);
     }
-  }, [activeTab, tabs, setQuery]); // Runs when activeTab or tabs change
+  }, [activeTab, tabs, setQuery]);
 
   const addTab = () => {
     const newTabId = tabs.length + 1;
-    const newTab = { id: newTabId, title: `Query ${newTabId}`, query: "" };
+    const newTab = { id: newTabId, title: `Tab ${newTabId}`, query: "" };
     setTabs([...tabs, newTab]);
     setActiveTab(newTabId);
-    setQuery(""); // Set new tab's query as empty
+    setQuery("");
   };
 
   const removeTab = (id) => {
@@ -29,8 +35,8 @@ const Tabs = () => {
       .filter((tab) => tab.id !== id)
       .map((tab, index) => ({
         ...tab,
-        id: index + 1, // Reassign consecutive IDs
-        title: `Query ${index + 1}`,
+        id: index + 1,
+        title: `Tab ${index + 1}`,
       }));
 
     setTabs(newTabs);
@@ -52,8 +58,35 @@ const Tabs = () => {
       )
     );
     if (id === activeTab) {
-      setQuery(newQuery); // Update the context state only for the active tab
+      setQuery(newQuery);
     }
+  };
+
+  const handleQueryExecution = () => {
+    if (query.length <= 1) {
+      alert("Write the query");
+      return;
+    }
+    setShowTerminal(true);
+
+    setHistory((prevHistory) => {
+      if (!prevHistory.includes(query)) {
+        return [...prevHistory, query];
+      }
+      return prevHistory;
+    });
+
+    if (query === "select * from customers") {
+      setPath("/data/customers.csv");
+    } else if (query === "select * from employee") {
+      setPath("/data/employee.csv");
+    } else if (query === "select * from order") {
+      setPath("/data/order.csv");
+    } else {
+      setPath("/data/order.csv");
+    }
+
+    console.log("Executing query:", query);
   };
 
   return (
@@ -81,9 +114,26 @@ const Tabs = () => {
             </div>
           ))}
         </div>
-        <button className="add-tab-btn" onClick={addTab}>
-          + Add Tab
-        </button>
+
+        <div>
+          <button
+            className="add-tab-btn"
+            data-tooltip-id="add-tab-tooltip"
+            data-tooltip-content="Add New Tab"
+            onClick={addTab}
+          >
+            <IoIosAddCircleOutline />
+          </button>
+
+          <button
+            className="add-tab-btn"
+            data-tooltip-id="execute-tooltip"
+            data-tooltip-content="Execute Query"
+            onClick={handleQueryExecution}
+          >
+            <VscRunAll />
+          </button>
+        </div>
       </div>
 
       <div className="tab-content">
@@ -97,6 +147,10 @@ const Tabs = () => {
           ) : null
         )}
       </div>
+
+      {/* Place Tooltip component at the root */}
+      <Tooltip id="add-tab-tooltip" place="bottom" style={{fontSize:"0.6rem"}} />
+      <Tooltip id="execute-tooltip" place="bottom" style={{fontSize:"0.6rem"}} />
     </div>
   );
 };

@@ -10,17 +10,11 @@ const SchemaComponent = () => {
         <div key={index} className="table-box">
           <div className="table-header">{table.tableName}</div>
           <table className="schema-table">
-            <thead>
-              <tr>
-                <th>Column</th>
-                <th>Type</th>
-              </tr>
-            </thead>
             <tbody>
               {table.columns.map((column, colIndex) => (
                 <tr key={colIndex}>
-                  <td>{column.name}</td>
-                  <td>{column.type}</td>
+                  <td className="col-name">{column.name}</td>
+                  <td className="col-type">{column.type}</td>
                 </tr>
               ))}
             </tbody>

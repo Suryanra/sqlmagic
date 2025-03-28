@@ -1,6 +1,6 @@
 import React, { useState, lazy, Suspense } from "react";
 import "./App.css";
-import './components/Terminal.css'
+import "./components/Terminal.css";
 import Navbar from "./components/Navbar";
 import MainContent from "./components/MainContent";
 
@@ -16,7 +16,7 @@ const App = () => {
   const [darkMode, setDarkMode] = useState(false);
 
   return (
-    <div className={`container ${darkMode ? "dark-mode" : "light-mode"}`}>
+    <div className={`container  ${darkMode ? "dark-mode" : "light-mode"}`}>
       <Navbar
         showLeftSidebar={showLeftSidebar}
         setShowLeftSidebar={setShowLeftSidebar}
@@ -33,21 +33,26 @@ const App = () => {
           {showLeftSidebar && <LeftSidebar />}
         </Suspense>
 
-        <main className="content"><MainContent/></main>
+        <main className="content">
+          <MainContent
+            showTerminal={showTerminal}
+            setShowTerminal={setShowTerminal}
+          />
+        </main>
 
         <Suspense fallback={<div>Loading Right Sidebar...</div>}>
           {showRightSidebar && <RightSidebar />}
         </Suspense>
       </div>
 
-      {showTerminal && (<div className="terminal-container">
+      {showTerminal && (
+        <div className="terminal-container">
           <Suspense fallback={<div>Loading Terminal...</div>}>
             <Terminal
               height={terminalHeight}
               setHeight={setTerminalHeight}
-        showTerminal={showTerminal}
-        setShowTerminal={setShowTerminal}
-              
+              showTerminal={showTerminal}
+              setShowTerminal={setShowTerminal}
               onClose={() => setShowTerminal(false)}
             />
           </Suspense>

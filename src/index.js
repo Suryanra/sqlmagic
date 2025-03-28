@@ -5,7 +5,7 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { sendToVercelAnalytics } from "./vitals";
 import AppProvider from "./context/AppProvider";  // Import the provider
-
+import 'react-tooltip/dist/react-tooltip.css'
 ReactDOM.render(
   <React.StrictMode>
     <AppProvider>

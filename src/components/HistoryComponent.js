@@ -4,7 +4,7 @@ import "./HistoryComponents.css";
 
 const HistoryComponent = () => {
   const { history, setQuery } = useContext(AppContext);
-  const [copiedIndex, setCopiedIndex] = useState(null);
+  const [copiedIndex, setCopiedIndex] = useState(null);  // Track copied item index
 
   const handleClick = (query) => {
     setQuery(query);
@@ -22,16 +22,18 @@ const HistoryComponent = () => {
     <div className="history-container">
       {history &&
         history.map((query, index) => (
-          <div key={index} className="history-query">
-            <span onClick={() => handleClick(query)}>{query}</span>
+          <div key={index} className="sql-text-container">
+            <pre className="sql-text">{query.length < 26 ? query : query.slice(0, 25) + "..."}</pre>
 
-            {/* Copy Button */}
-            <button
-              className="copy-btn"
+            <img
+              src="/copyicon.jpg"
+              alt="Copy"
+              className="copy-icon"
               onClick={() => handleCopy(query, index)}
-            >
-              {copiedIndex === index ? "✅" : "📋"}
-            </button>
+            />
+
+            {/* Show "Copied!" message only for the copied index */}
+            {copiedIndex === index && <span className="copied-text">Copied!</span>}
           </div>
         ))}
     </div>

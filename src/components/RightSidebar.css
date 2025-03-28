@@ -17,7 +17,6 @@
     box-sizing: border-box;
     padding: 5px;
     margin-top: 5px;
-    border:2px solid rgb(174, 173, 173);
     display: flex;
     justify-content: center;
     overflow-y: auto;
@@ -80,7 +79,7 @@
 .generate-btn {
   width: 100%;
   margin-top: 10px;
-  background-color: #2563eb;
+  background-color: #0077cc;
   color: white;
   padding: 10px;
   border: none;

@@ -1,6 +1,6 @@
 const schemaData = [
   {
-    tableName: "Student",
+    tableName: "Employee",
     columns: [
       { name: "id", type: "INT PRIMARY KEY AUTO_INCREMENT" },
       { name: "name", type: "VARCHAR(255)" },
@@ -18,12 +18,12 @@ const schemaData = [
     ],
   },
   {
-    tableName: "Product",
+    tableName: "Order",
     columns: [
       { name: "id", type: "INT PRIMARY KEY AUTO_INCREMENT" },
       { name: "name", type: "VARCHAR(255)" },
       { name: "price", type: "DECIMAL(10,2)" },
-      { name: "stock", type: "INT" },
+      { name: "rating", type: "INT" },
     ],
   },
   {

@@ -35,38 +35,12 @@ const Navbar = React.memo(({
     };
   }, []);
 
-  const handleQueryExecution = () => {
-    if(query.length<=1){
-      alert("Write the query");
-      return;
-    }
-    setShowTerminal(true);
 
-    setHistory((prevHistory) => {
-      if (!prevHistory.includes(query)) {
-        return [...prevHistory, query];
-      }
-      return prevHistory;
-    });
-
-    if (query === "select * from customers") {
-      setPath("/data/customers.csv");
-    } else if (query === "select * from employee") {
-      setPath("/data/employee.csv");
-    } else if (query === "select * from order") {
-      setPath("/data/order.csv");
-    } else {
-      setPath("/data/order.csv");
-    }
-
-    console.log("Executing query:", query);
-  };
 
   return (
     <nav className="navbar">
       <div>SQL-Magic</div>
       <div className="controls">
-
         {/* Layout Button */}
         <button
           onClick={() => setShowLayoutOptions(!showLayoutOptions)}
@@ -96,10 +70,10 @@ const Navbar = React.memo(({
         )}
 
         {/* Execute Button */}
-        <button onClick={handleQueryExecution}>
+        {/* <button onClick={handleQueryExecution}>
           <VscRunAll className="icon" aria-label="Execute" />
-           {/* Execute */}
-        </button>
+           Execute
+        </button> */}
 
         {/* Dark Mode Toggle */}
         <button onClick={() => setDarkMode(!darkMode)} aria-label="Toggle Mode" >

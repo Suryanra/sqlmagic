@@ -1,7 +1,7 @@
 
 .schema-container {
   width: 100%;
-  border-radius: 10px;
+  height:90%;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   font-family: "Arial", sans-serif;
   font-size: 0.8rem;
@@ -11,58 +11,59 @@
   row-gap: 4px;
   padding: 5px;
   box-sizing: border-box;
-
+  
 }
-
-.schema-title {
+ .schema-title {
   font-size: 18px;
   font-weight: bold;
   margin-bottom: 10px;
   text-align: left;
   left:10px;
+  color:rgb(107 114 128)
 }
-
 .table-box {
   box-sizing: border-box;
-      width: 100%;
-  border-radius:2px;
-  border:2px solid  #a3a3a3;
-  padding: 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  border-radius:5px;
+  border:1px solid #e6e6e6;
+  padding:5px ;
 }
-
-
 .table-header {
-  font-size: 18px;
+  font-size: 14px;
   font-weight: bold;
   padding: 4px;
-  border-radius: 6px;
   text-align: left;
+  color:#020817;
 }
-
-
 .schema-table {
-  width: 95%;
-  margin-top: 4px;
+  width: 100%;
+  font-size: 12px;
+  /* border:1px solid grey; */
   border-collapse: collapse;
 }
-
 .schema-table th,
 .schema-table td {
   padding: 4px;
   text-align: left;
-  border-bottom: 1px solid #444;
+  /* border-bottom: 1px solid #444; */
+}
+.schema-table tr .col-name{
+  font-weight: 500;
+  color:#020817;
+}
+.schema-table tr .col-type{
+  font-weight: 500;
+  font-size: smaller;
 }
 
-
-
-
+.schema-table tbody{
+  color:#606874
+}
 .schema-container {
   overflow-y: auto;
   scrollbar-width: none;  
   -ms-overflow-style: none; 
 }
-
 .schema-container::-webkit-scrollbar {
   display: none;
 }

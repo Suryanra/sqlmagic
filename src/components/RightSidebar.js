@@ -9,7 +9,7 @@ const RightSidebar = () => {
   
   const [activeTab, setActiveTab] = useState("schema");
   return (
-    <aside className="sidebar left">
+    <aside className="sidebar right">
       <div className="sidebar-navbar">
         <button
           className={activeTab === "schema" ? "active" : ""}

@@ -10,13 +10,16 @@
   background-color: #1a252f; 
   color: #ffffff;
   padding: 12px;
+  padding-left: 30px;;
+  padding-right: 70px;;
   text-align: center;
   font-size: 18px;
   font-weight: bold;
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
+
 }
 
 .controls {
@@ -70,11 +73,17 @@
   flex-shrink: 0;
 }
 
+.left{
+  border-right: 1px solid grey;
+}
 
+.right{
+  border-left: 1px solid grey;;
+}
 
 
 .light-mode .sidebar {
-  background-color: #e6e6e6; 
+  background-color: #F9FAFB;
   color: #000;
 }
 
@@ -98,10 +107,14 @@
 
 .terminal {
   background-color: #262626; 
+  background-color: #f80000; 
+
   color: white;
   padding: 12px;
   overflow-y: auto;
-  border-top: 2px solid #0056b3; 
+  /* border-top: 2px solid #0056b3;  */
+  border-top: 5px solid #f8aa0f; 
+
   position: relative;
   resize: vertical;
 }

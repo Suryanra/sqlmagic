@@ -1,7 +1,4 @@
-.close-icon{
-      scale:2;
-      cursor: pointer;
-}
+
 
 .terminal {
   display: flex;
@@ -38,12 +35,19 @@
   height: 5px;
   background: #555;
 }
+.resizer:hover {
+  background-color: #0077cc;
+}
 
 .close-icon {
   font-size: 15px;
   cursor: pointer;
   transition: color 0.2s;
-  padding-bottom: 10px;;
+  padding-bottom: 10px;
+  scale:2;
+}
+.close-icon :hover{
+  scale:1.02;
 }
 
 .terminal-content {
