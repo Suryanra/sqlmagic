@@ -115,6 +115,8 @@ npm start
 ## 🖼️ **Performance Metrics**
 
 ![image](https://github.com/user-attachments/assets/ac40fc87-c262-473a-8807-6a581d00f166)
+![image](https://github.com/user-attachments/assets/e61513f3-3ecc-4287-a981-89e01a01f54a)
+
 
 
 
