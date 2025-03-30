@@ -5,7 +5,7 @@ import './style/TableDropdown.css'
 import AppContext from "../context/AppContext";
 
 const TableDropdown = ({ setShowTermianl}) => {
-  const options = ["Employee Data", "Teacher Data", "Orders Data", "Courses Data"];
+  const options = ["Employee Data", "Teacher Data", "Orders Data", "Courses Data","Customer Data"];
   const [selectedOption, setSelectedOption] = useState(options[0]);
   const { setQuery,setPath,query } = useContext(AppContext);
 
@@ -18,6 +18,8 @@ const TableDropdown = ({ setShowTermianl}) => {
       setPath("/data/orders.csv");
     }else if (option.value === "Courses Data") {
       setPath("/data/courses.csv");
+    }else if (option.value === "Customer Data") {
+      setPath("/data/customers.csv");
     }else {
       setPath("/data/orders.csv");
     }
