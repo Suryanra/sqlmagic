@@ -7,7 +7,7 @@ const NlptoSql = () => {
     
   const handleGenerateSQL = () => {
     if (inputText.trim()) {
-      setGeneratedSQL("select * from employee");
+      setGeneratedSQL("select * from teachers;");
     } else {
       setGeneratedSQL("");
     }
